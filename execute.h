@@ -5,6 +5,6 @@
 #ifndef BRAINFUCK_FOR_EMBEDDED_EXECUTE_H
 #define BRAINFUCK_FOR_EMBEDDED_EXECUTE_H
 
-void execute(const unsigned short * instructions, unsigned short instrution_limit, unsigned short * jumps);
+void execute(const unsigned char * instructions, unsigned short instrution_limit);
 
 #endif //BRAINFUCK_FOR_EMBEDDED_EXECUTE_H
