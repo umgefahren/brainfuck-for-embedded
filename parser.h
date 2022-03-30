@@ -22,6 +22,8 @@
 #define GET_CHR_D 5
 #define COMMENT_D 6
 
+#define JUMP_ARRAY_SIZE 15000
+
 unsigned short parse(unsigned short * instructions, unsigned short * jumps);
 
 #endif //BRAINFUCK_FOR_EMBEDDED_PARSER_H

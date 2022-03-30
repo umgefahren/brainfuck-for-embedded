@@ -36,10 +36,20 @@ unsigned short parse(unsigned short * instructions, unsigned short * jumps) {
             open_brackets.pop();
             unsigned short jump_for = instruction_pointer;
             unsigned short jump_back = opening_bracket;
-            unsigned short jmp_for_d = (opening_index++) * 2;
-            unsigned short jmp_back_d = (closing_index++) * 2 + 1;
+            unsigned short jmp_for_d = (opening_index) * 2;
+            opening_index += 1;
+            unsigned short jmp_back_d = (closing_index) * 2 + 1;
+            closing_index += 1;
             jumps[jmp_for_d] = jump_for;
+            if (jump_for >= JUMP_ARRAY_SIZE) {
+                printf("Out of bounds while writing jump\r\n");
+                exit(1);
+            }
             jumps[jmp_back_d] = jump_back;
+            if (jmp_back_d >= JUMP_ARRAY_SIZE) {
+                printf("Out of bounds while writing jump\r\n");
+                exit(1);
+            }
             instructions[instruction_pointer] = jmp_back_d + 8;
             instructions[opening_bracket] = jmp_for_d + 8;
         } else {
@@ -49,6 +59,7 @@ unsigned short parse(unsigned short * instructions, unsigned short * jumps) {
         instruction_pointer++;
     }
     fclose(file);
-    printf("Opening index => %i closing index => %i\n", opening_index, closing_index);
+    printf("Opening index => %i closing index => %i\r\n", opening_index, closing_index);
+    printf("Read %i instructions\r\n", instruction_pointer);
     return instruction_pointer;
 };
