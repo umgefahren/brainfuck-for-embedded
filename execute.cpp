@@ -8,7 +8,14 @@
 #include <cstdlib>
 
 void execute(const unsigned short * instructions, unsigned short instrution_limit, unsigned short * jumps) {
-    unsigned char * memory = (unsigned char *) calloc(30000, sizeof(unsigned char));
+    auto * memory = (unsigned char *) calloc(30000, sizeof(unsigned char));
+    if (memory == nullptr) {
+        printf("Couldn't allocate memory for memory\r\n");
+        exit(1);
+    }
+    for (int i = 0; i < 30000; i++) {
+        memory[i] = 0;
+    }
     unsigned int ptr = 0;
     unsigned int instruction_ptr = 0;
     while (instruction_ptr < instrution_limit) {
