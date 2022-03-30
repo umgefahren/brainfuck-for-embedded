@@ -1,3 +1,0 @@
-/Users/hannesfurmans/CLionProjects/brainfuck-for-embedded/cmake-build-default/CMakeFiles/rebuild_cache.dir
-/Users/hannesfurmans/CLionProjects/brainfuck-for-embedded/cmake-build-default/CMakeFiles/edit_cache.dir
-/Users/hannesfurmans/CLionProjects/brainfuck-for-embedded/cmake-build-default/CMakeFiles/brainfuck_for_embedded.dir

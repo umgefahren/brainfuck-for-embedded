@@ -1,5 +1,0 @@
-# ninja log v5
-3	443	1648649577302575747	CMakeFiles/brainfuck_for_embedded.dir/execute.cpp.o	6efb74302b0db27
-1	1132	1648649577990385985	CMakeFiles/brainfuck_for_embedded.dir/parser.cpp.o	9c1d343a0ce9e02
-0	1977	1648649578837338435	CMakeFiles/brainfuck_for_embedded.dir/main.cpp.o	b3de7273e967abea
-1978	2155	1648649579011316705	brainfuck_for_embedded	d05321a309fb0f2
