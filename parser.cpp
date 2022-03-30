@@ -40,8 +40,8 @@ unsigned short parse(unsigned short * instructions, unsigned short * jumps) {
             unsigned short jmp_back_d = (closing_index++) * 2 + 1;
             jumps[jmp_for_d] = jump_for;
             jumps[jmp_back_d] = jump_back;
-            instructions[instruction_pointer] = jump_back + 8;
-            instructions[opening_bracket] = jump_for + 8;
+            instructions[instruction_pointer] = jmp_back_d + 8;
+            instructions[opening_bracket] = jmp_for_d + 8;
         } else {
             instructions[instruction_pointer] = COMMENT_D;
         }
